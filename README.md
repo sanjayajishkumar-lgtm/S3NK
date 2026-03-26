@@ -1,129 +1,99 @@
+# S3NK | Search Support Scout Navigation K9
 
-# 🚀 Next.js Template
-
-A modern **Next.js 15 + React 19** starter template with batteries included.  
-Designed for scalability, testing, performance, and developer experience.
-
----
-
-## ✨ Features
-
-- ⚡ **Next.js 15** (App Router, React 19, Server Components ready)
-- 🎨 **Tailwind CSS 4** for styling
-- 🧹 **ESLint + Prettier** for code quality
-- 🔍 **SEO-ready** with `next-seo` and `next-sitemap`
-- 📦 **PWA support** with `next-pwa`
-- 📊 **Monitoring & Metrics** with Prometheus (`/api/metrics`)
-- 📝 **Changelog automation** with `standard-version`
-- 🧪 **Testing** stack:
-  - **Jest + RTL** for unit tests
-  - **Playwright** for end-to-end & UI testing
-- 📚 **Docs-as-code** inside `/docs` (separate project)
-- 🐳 **Docker-ready** for production deployments
+<div align="center">
+  <p align="center">
+    <strong>Search Support Scout Navigation K9 (S3NK)</strong> — A premium, scroll-driven 3D mission briefing experience for the next generation of quadruped rescue robotics.
+  </p>
+  <p align="center">
+    <a href="https://s3nk.example.com"><strong>Explore the Mission</strong></a>
+  </p>
+</div>
 
 ---
 
-## 📂 Project Structure
+## 🐕 What is S3NK?
 
-```
+**S3NK** (Search Support Scout Navigation K9) is an advanced quadruped inspection and reconnaissance platform designed for the most hostile environments. Built to bridge the gap where wheels fail and humans cannot safely tread, S3NK combines autonomous intelligence with ruggedized physical stability.
 
-nextjs\_template/
-│── app/               # Next.js app router
-│── lib/               # Shared libraries (logger, metrics, etc.)
-│── public/            # Static assets
-│── docs/              # Documentation project (MkDocs / Docusaurus)
-│── tests/             # Unit & E2E tests
-│── .eslintrc.json     # Linting rules
-│── tailwind.config.js # Tailwind setup
-│── package.json
-
-````
+- **Search Support Scout**: Emphasizes its core function in reconnaissance and area inspection.
+- **Navigation**: Highlights its industry-leading autonomous and terrain-adaptive mobility system.
+- **K9**: Evokes the design of a quadruped companion, drawing parallels between the robot's reliability and a rescue dog's intuition.
 
 ---
 
-## 🛠️ Scripts
+## 🕸️ Tech Stack
 
-| Script             | Description                            |
-|--------------------|----------------------------------------|
-| `npm run dev`      | Start dev server (Next.js)             |
-| `npm run build`    | Build production app                   |
-| `npm run start`    | Run production build                   |
-| `npm run lint`     | Run ESLint                             |
-| `npm run prettier` | Format code with Prettier              |
-| `npm run test`     | Run Jest tests                        |
-| `npm run test:ui`  | Run Playwright tests                   |
-| `npm run sitemap`  | Generate sitemap                       |
-| `npm run release`  | Create a new release + changelog       |
+This project is a high-performance, cinematic web experience built with the latest industry standards:
+
+- **Framework**: [Next.js 15](https://nextjs.org/) & [React 19](https://react.dev/)
+- **3D Engine**: [Three.js](https://threejs.org/) via [React Three Fiber (R3F)](https://docs.pmnd.rs/react-three-fiber)
+- **Animation**: [GSAP](https://gsap.com/) for scroll-driven camera paths and cinematic transitions
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/) for real-time telemetry and mission status
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) & [Vanilla CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) for premium aesthetics
+- **Components**: [shadcn/ui](https://ui.shadcn.com/) for tactical HUD interfaces
+- **PWA**: PWA-ready for offline mission access
 
 ---
 
-## 📊 Observability
+## 🚁 The Experience
 
-- **Prometheus metrics**: exposed at [`/api/metrics`](./app/api/metrics/route.ts)  
-- **Grafana**: use Prometheus as a data source for dashboards  
-- **Logging**: `pino` for structured logs (pretty logs in dev)
+The website is structured as an 8-scene immersive briefing, guiding the user through the robot's core capabilities:
+
+1.  **Adaptive Locomotion** — Navigation through extreme rubble and debris.
+2.  **Terrain Awareness** — Real-time LiDAR and sensor fusion mapping.
+3.  **Visual Surveillance** — persistent HD tactical intelligence.
+4.  **Hazard Detection** — Biological and chemical threat identification.
+5.  **Hybrid Control** — Seamless transition between AI and Operator.
+6.  **Payload Delivery** — Deploying critical supplies into the field.
+7.  **Data Streaming** — Real-time telemetry and fleet metrics.
+8.  **Modular Architecture** — Hot-swappable sensor and payload systems.
 
 ---
 
-## 🧪 Testing
+## 🛠️ Getting Started
 
-- **Jest**: for unit & integration tests  
-- **React Testing Library**: for component testing  
-- **Playwright**: for UI and end-to-end workflows
+### Prerequisites
+- Node.js 20+
+- npm 10+
 
+### Installation
 ```bash
-npm run test       # Run Jest tests
-npm run test:ui    # Run Playwright tests
-````
-
----
-
-## 📦 Releasing
-
-This template uses **[standard-version](https://github.com/conventional-changelog/standard-version)**:
-
-```bash
-npm run release           # Patch release
-npm run release:minor     # Minor release
-npm run release:major     # Major release
-```
-
-It auto-generates a `CHANGELOG.md`.
-
----
-
-## 🐳 Docker
-
-```bash
-docker build -t nextjs-template .
-docker run -p 3000:3000 nextjs-template
-```
-
-Optimized multi-stage build with `node:20-slim`.
-
----
-
-## 📚 Documentation
-
-Docs are managed as a **separate project** inside `/docs`.
-Run it independently for architecture, API references, and developer guides.
-
----
-
-## 🚀 Getting Started
-
-```bash
-git clone https://github.com/your-username/nextjs-template.git
-cd nextjs-template
+git clone https://github.com/sanjayajishkumar-lgtm/S3NK.git
+cd S3NK
 npm install
+```
+
+### Development
+```bash
 npm run dev
 ```
 
-Visit 👉 [http://localhost:3000](http://localhost:3000)
+### Build & Deploy
+```bash
+npm run build
+# Deploy to Netlify/Vercel
+```
+
+---
+
+## 📊 Mission HUD & Telemetry
+
+The interface features a real-time Tactical HUD that updates based on the scroll position, reflecting the robot's current "telemetry" as you explore the briefing.
+
+- **Battery & Signal Metrics**: Dynamically tracked based on mission phase.
+- **Radar Scan**: Active LiDAR visualizers during awareness scenes.
+- **Mission Progress**: Multi-dot navigation for quick access to specific briefing segments.
+
+---
+
+## 🛡️ Performance & Adaptive Quality
+
+S3NK is designed to look stunning on all devices while maintaining performance:
+- **High Tier**: Full 3D, physics-based particles, and advanced lighting.
+- **Low Tier**: Optimized textures, reduced particle count, and simplified lighting.
+- **Fallback**: A complete 2D CSS-driven experience for devices without WebGL support.
 
 ---
 
 ## 📜 License
-
-MIT
-
+MIT © 2026 S3NK Robotics.

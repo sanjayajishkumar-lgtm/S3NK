@@ -1,7 +1,7 @@
-# S3NK — Agent Handoff Document
+# S3NK — Search Support Scout Navigation K9
 
 > **Last Updated**: 2026-03-26  
-> **Project**: S3NK Quadruped Inspection & Rescue Robot — Storytelling Website  
+> **Project**: S3NK (Search Support Scout Navigation K9) — Storytelling Website  
 > **Repo**: `c:\Users\sanja\Documents\S3NK`  
 > **Stack**: Next.js 15 · React 19 · Tailwind CSS 4 · Three.js · R3F · GSAP · Zustand · shadcn/ui
 

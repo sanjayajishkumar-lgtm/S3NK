@@ -21,8 +21,8 @@ const jetbrainsMonoFont = JetBrains_Mono({
 
 export const metadata = createMetadata({
   siteUrl: "https://s3nk.example.com",
-  title: "S3NK Quadruped Inspection & Rescue Assist",
-  description: "Deploy Anywhere. Navigate Everything. Save Lives.",
+  title: "S3NK — Search Support Scout Navigation K9",
+  description: "Advanced quadruped inspection and reconnaissance robot for mission-critical rescue operations.",
   appName: "S3NK",
   category: "Technology",
   keywords: ["robot", "quadruped", "rescue", "inspection", "S3NK", "3d"],
