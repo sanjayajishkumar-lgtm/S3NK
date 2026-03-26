@@ -11,7 +11,7 @@
 
 ---
 
-## 🐕 What is S3NK?
+##  What is S3NK?
 
 **S3NK** (Search Support Scout Navigation K9) is an advanced quadruped inspection and reconnaissance platform designed for the most hostile environments. Built to bridge the gap where wheels fail and humans cannot safely tread, S3NK combines autonomous intelligence with ruggedized physical stability.
 
@@ -35,7 +35,7 @@ This project is a high-performance, cinematic web experience built with the late
 
 ---
 
-## 🚁 The Experience
+##  The Experience
 
 The website is structured as an 8-scene immersive briefing, guiding the user through the robot's core capabilities:
 
