@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "title": "S3NK",
+    "subtitle": "QUADRUPED INSPECTION & RESCUE ASSIST",
+    "tagline": "Deploy Anywhere. Navigate Everything. Save Lives.",
+    "cta": "Begin Mission Briefing"
+  },
+  "features": [
+    {
+      "id": "terrain-mobility",
+      "scene": 1,
+      "title": "Adaptive Quadruped Locomotion",
+      "tagline": "Move Anywhere. No Limits.",
+      "description": "Navigate rubble, stairs, and extreme terrain with dynamic balance control. Four-legged stability where wheels fail.",
+      "detail": "Self-stabilizing gait algorithms adapt in real-time to shifting surfaces and debris fields.",
+      "environment": "rubble",
+      "robotAction": "walk",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "terrain-awareness",
+      "scene": 2,
+      "title": "Intelligent Terrain Awareness",
+      "tagline": "See What Others Can't.",
+      "description": "Multi-sensor fusion maps the unseen. LiDAR, depth cameras, and IMU data create a real-time 3D understanding of hostile terrain.",
+      "detail": "360° environmental scanning with obstacle classification and path optimization.",
+      "environment": "rubble",
+      "robotAction": "scan",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "surveillance",
+      "scene": 3,
+      "title": "Real-Time Visual Surveillance",
+      "tagline": "Eyes Where You Need Them.",
+      "description": "HD live-stream from the field. Day or night, S3NK provides persistent visual intelligence to rescue command.",
+      "detail": "Low-latency video feed with night vision capability and automatic scene enhancement.",
+      "environment": "industrial",
+      "robotAction": "idle",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "hazard-detection",
+      "scene": 4,
+      "title": "Environmental Hazard Detection",
+      "tagline": "Danger Detected. Lives Protected.",
+      "description": "Gas leaks, toxic fumes, structural instability — S3NK identifies threats humans can't sense.",
+      "detail": "Multi-spectrum environmental sensors trigger autonomous danger zone alerts.",
+      "environment": "hazard",
+      "robotAction": "alert",
+      "dangerLevel": "danger"
+    },
+    {
+      "id": "control-system",
+      "scene": 5,
+      "title": "Hybrid Control System",
+      "tagline": "Autonomous. Manual. Your Call.",
+      "description": "Seamlessly switch between autonomous navigation and direct operator control. AI handles the routine — humans decide the critical.",
+      "detail": "Dual-mode operation with intelligent handoff and override capability.",
+      "environment": "industrial",
+      "robotAction": "idle",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "payload-delivery",
+      "scene": 6,
+      "title": "Payload Delivery System",
+      "tagline": "Deliver Hope. Into the Impossible.",
+      "description": "Medical supplies, communication devices, emergency tools — S3NK carries and deploys critical payloads where humans cannot reach.",
+      "detail": "Modular payload bay with precision deployment and secure transport.",
+      "environment": "rubble",
+      "robotAction": "deploy",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "data-streaming",
+      "scene": 7,
+      "title": "Live Data & Telemetry",
+      "tagline": "Every Data Point. In Real Time.",
+      "description": "Battery, position, sensor readings, mission status — a continuous stream of intelligence from the field to command.",
+      "detail": "Telemetry dashboard with live metrics, historical data, and predictive analytics.",
+      "environment": "digital",
+      "robotAction": "idle",
+      "dangerLevel": "normal"
+    },
+    {
+      "id": "modularity",
+      "scene": 8,
+      "title": "Modular Architecture",
+      "tagline": "One Platform. Infinite Configurations.",
+      "description": "Swap sensors, arms, cameras, and payloads. S3NK adapts to the mission — not the other way around.",
+      "detail": "Hot-swappable module system designed for field-level reconfiguration.",
+      "environment": "digital",
+      "robotAction": "explode",
+      "dangerLevel": "normal"
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Deploy?",
+    "subtext": "S3NK is built for the missions that matter most.",
+    "buttons": [
+      { "label": "Deploy S3NK", "variant": "primary" },
+      { "label": "Request Demo", "variant": "secondary" },
+      { "label": "View Mission Capabilities", "variant": "ghost" }
+    ]
+  },
+  "footer": {
+    "tagline": "S3NK — Where machines go, so hope follows.",
+    "year": 2026
+  }
+}
