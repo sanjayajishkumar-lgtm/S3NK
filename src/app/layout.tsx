@@ -1,4 +1,4 @@
-import { createMetadata } from "@/lib/metadata";
+import { createMetadata, createViewport } from "@/lib/metadata";
 import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
@@ -28,6 +28,8 @@ export const metadata = createMetadata({
   keywords: ["robot", "quadruped", "rescue", "inspection", "S3NK", "3d"],
   twitterHandle: "@s3nkrobot",
 });
+
+export const viewport = createViewport();
 
 export default function RootLayout({
   children,

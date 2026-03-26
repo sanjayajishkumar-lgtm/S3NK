@@ -1,5 +1,5 @@
 // lib/metadata.ts
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 interface ProjectMetadataOptions {
   siteUrl: string;
@@ -26,7 +26,6 @@ export function createMetadata({
     title,
     description,
     manifest: "/manifest.webmanifest",
-    themeColor: "#000000",
     applicationName: appName,
     category,
     keywords,
@@ -77,6 +76,11 @@ export function createMetadata({
       statusBarStyle: "black-translucent",
       title: appName,
     },
+  };
+}
+export function createViewport(): Viewport {
+  return {
+    themeColor: "#000000",
   };
 }
 
