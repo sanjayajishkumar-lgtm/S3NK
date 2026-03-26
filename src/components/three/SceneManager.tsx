@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { PerformanceMonitor, Preload } from '@react-three/drei';
 import { useMissionStore } from '@/stores/missionStore';
@@ -14,12 +14,7 @@ import { SCENE_TIMINGS } from '@/lib/sceneConfig';
 export function SceneManager() {
   const setPerformanceTier = useMissionStore((state) => state.setPerformanceTier);
   const performanceTier = useMissionStore((state) => state.performanceTier);
-  const scrollProgress = useMissionStore((state) => state.scrollProgress);
   const currentScene = useMissionStore((state) => state.currentScene);
-
-  // We re-render only when needed using frameloop="demand", but since we have 
-  // continuous animations (idle, walk), we actually need "always" when visible.
-  // Optimization: use frameloop="always" but reduce pixel ratio on low perf.
 
   const dpr = performanceTier === 'low' ? [0.5, 1] : [1, 2];
 
@@ -37,16 +32,16 @@ export function SceneManager() {
           onDecline={() => {
             const current = useMissionStore.getState().performanceTier;
             if (current === 'high') setPerformanceTier('low');
-            else setPerformanceTier('fallback'); // This triggers DOM fallback
+            else setPerformanceTier('fallback');
           }}
-          flipflops={3} // Allow 3 recovers
-          threshold={0.5} // Under 30fps
+          flipflops={3}
+          threshold={0.5}
         >
           <Suspense fallback={null}>
             <CameraController />
             <EnvironmentScene />
             <RobotModel />
-            <ParticleSystem environment={sceneData.environment} />
+            <ParticleSystem environment={sceneData?.environment || 'void'} />
             <Preload all />
           </Suspense>
         </PerformanceMonitor>

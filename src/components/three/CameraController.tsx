@@ -16,7 +16,7 @@ export function CameraController() {
   const targetPos = useRef(new THREE.Vector3());
   const targetLookAt = useRef(new THREE.Vector3());
 
-  useFrame((_, delta) => {
+  useFrame((_, _delta) => {
     // Determine which two scenes we are between
     let prevScene = SCENE_TIMINGS[0];
     let nextScene = SCENE_TIMINGS[0];
@@ -26,7 +26,7 @@ export function CameraController() {
       const scene = SCENE_TIMINGS[i];
       const next = SCENE_TIMINGS[i + 1];
       
-      if (scrollProgress >= scene.progressRange[0] && scrollProgress <= scene.progressRange[1]) {
+      if (scene && next && scrollProgress >= scene.progressRange[0] && scrollProgress <= scene.progressRange[1]) {
         prevScene = scene;
         nextScene = next;
         
@@ -36,24 +36,23 @@ export function CameraController() {
       }
     }
 
-    if (scrollProgress >= SCENE_TIMINGS[SCENE_TIMINGS.length - 1].progressRange[0]) {
-        prevScene = SCENE_TIMINGS[SCENE_TIMINGS.length - 1];
-        nextScene = prevScene;
+    const lastScene = SCENE_TIMINGS[SCENE_TIMINGS.length - 1];
+    if (lastScene && scrollProgress >= lastScene.progressRange[0]) {
+        prevScene = lastScene;
+        nextScene = lastScene;
         localProgress = 1;
     }
 
     if (!prevScene || !nextScene) return;
 
     // Interpolate targets
-    targetPos.current.fromArray(prevScene.cameraPos).lerp(
-      new THREE.Vector3().fromArray(nextScene.cameraPos),
-      localProgress
-    );
+    const startPos = new THREE.Vector3().fromArray(prevScene.cameraPos);
+    const endPos = new THREE.Vector3().fromArray(nextScene.cameraPos);
+    targetPos.current.copy(startPos).lerp(endPos, localProgress);
 
-    targetLookAt.current.fromArray(prevScene.cameraLookAt).lerp(
-      new THREE.Vector3().fromArray(nextScene.cameraLookAt),
-      localProgress
-    );
+    const startLookAt = new THREE.Vector3().fromArray(prevScene.cameraLookAt);
+    const endLookAt = new THREE.Vector3().fromArray(nextScene.cameraLookAt);
+    targetLookAt.current.copy(startLookAt).lerp(endLookAt, localProgress);
 
     // Smoothly damp current camera to target
     currentPos.current.lerp(targetPos.current, 0.05);

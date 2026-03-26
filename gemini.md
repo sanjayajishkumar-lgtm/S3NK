@@ -49,17 +49,25 @@ Full implementation plan path:
 - Implementation plan finalized
 - `gemini.md` (this file) written
 - Content strategy defined (`content.json` structure planned)
-- Phase 1: Foundation (dependencies installed, config files updated, globals.css styled, content.json seeded)
+### ✅ DONE
+- Implementation plan finalized
+- `gemini.md` (this file) written
+- Content strategy defined (`content.json` structure planned)
+### ✅ DONE
+- Implementation plan finalized
+- `gemini.md` (this file) written
+- Content strategy defined (`content.json` structure planned)
+- Phase 1: Foundation (dependencies, config files, globals.css, content.json)
 - Phase 2: 3D Engine (SceneManager, RobotModel, EnvironmentScene, CameraController, ScrollController)
-
-### 🔄 IN PROGRESS
-- Phase 3: UI Layer (DataHUD, FeatureOverlay, MissionProgress, HeroSection, CTASection)
-
-### ⏳ TODO
 - Phase 3: UI Layer (DataHUD, FeatureOverlay, MissionProgress, HeroSection, CTASection)
 - Phase 4: Page Assembly (`page.tsx` + `layout.tsx` wired up)
 - Phase 5: Fallback (WebGLDetector + FallbackExperience)
 - Phase 6: Performance (demand rendering, instancing, lazy load)
+
+### 🔄 IN PROGRESS
+- Phase 7: Verify (`npm run build` passes, scroll works, fallback triggers)
+
+### ⏳ TODO
 - Phase 7: Verify (`npm run build` passes, scroll works, fallback triggers)
 
 ---

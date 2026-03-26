@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 export function DataHUD() {
   const scrollProgress = useMissionStore((state) => state.scrollProgress);
-  const currentScene = useMissionStore((state) => state.currentScene);
   const performanceTier = useMissionStore((state) => state.performanceTier);
   
   const [alt, setAlt] = useState(1.2);

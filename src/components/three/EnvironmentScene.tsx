@@ -1,18 +1,17 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useMissionStore } from '@/stores/missionStore';
 
+import { SCENE_TIMINGS, SceneConfig } from '@/lib/sceneConfig';
+
 export function EnvironmentScene() {
   const currentScene = useMissionStore((state) => state.currentScene);
-  const { environment } = useMissionStore.getState(); // Assuming mapped outside, but let's derive it
-  const { SCENE_TIMINGS } = require('@/lib/sceneConfig');
   
   // Find current env based on currentScene
-  const sceneData = SCENE_TIMINGS.find((s: any) => s.id === currentScene) || SCENE_TIMINGS[0];
-  const envType = sceneData.environment;
+  const sceneData = SCENE_TIMINGS.find((s: SceneConfig) => s.id === currentScene) || SCENE_TIMINGS[0];
+  const envType = sceneData?.environment || 'void';
 
   const rubbleGroup = useRef<THREE.Group>(null);
   

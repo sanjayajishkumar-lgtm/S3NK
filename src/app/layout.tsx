@@ -4,21 +4,20 @@ import "./globals.css";
 import Script from "next/script";
 import { jsonLd } from "@/lib/metadata";
 
-const inter = Inter({
+const interFont = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const orbitron = Orbitron({
+const orbitronFont = Orbitron({
   variable: "--font-orbitron",
   subsets: ["latin"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMonoFont = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
-
 
 export const metadata = createMetadata({
   siteUrl: "https://s3nk.example.com",
@@ -30,16 +29,6 @@ export const metadata = createMetadata({
   twitterHandle: "@s3nkrobot",
 });
 
-<Script
-  id="json-ld"
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd({
-    siteUrl: "https://s3nk.example.com",
-    title: "S3NK Quadruped Rescue Robot",
-    description: "Deploy Anywhere. Navigate Everything. Save Lives.",
-  })) }}
-/>
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,8 +37,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${orbitron.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${interFont.variable} ${orbitronFont.variable} ${jetbrainsMonoFont.variable} antialiased`}
       >
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd({
+            siteUrl: "https://s3nk.example.com",
+            title: "S3NK Quadruped Rescue Robot",
+            description: "Deploy Anywhere. Navigate Everything. Save Lives.",
+          })) }}
+        />
         {children}
       </body>
     </html>

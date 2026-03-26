@@ -25,7 +25,7 @@ export function FeatureOverlay() {
           >
             <div className="space-y-1">
               <span className="font-mono text-[10px] tracking-[0.3em] text-s3nk-cyan glow-cyan uppercase">
-                Scene_0{feature.scene} // Feature_Intelligence
+                Scene_0{feature.scene} {/* Feature_Intelligence */}
               </span>
               <h2 className="font-display text-4xl md:text-6xl text-white uppercase leading-none glow-cyan tracking-tight">
                 {feature.title}

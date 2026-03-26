@@ -40,7 +40,7 @@ export function CTASection() {
         <div className="pt-24 flex flex-col items-center space-y-4">
           <div className="w-px h-16 bg-gradient-to-b from-s3nk-cyan/40 to-transparent"></div>
           <p className="font-mono text-[10px] text-white/20 tracking-[0.5em] uppercase">
-            {content.footer.tagline} // © {content.footer.year}
+            {content.footer.tagline} {/* © {content.footer.year} */}
           </p>
         </div>
       </div>
